@@ -1,9 +1,11 @@
 
 const Footer = () => {
     return (
-        <div>
-            <h1>Foooter</h1>
-        </div>
+        <footer className="footer footer-center p-4 bg-base-300 text-base-content float-end">
+            <aside>
+                <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+            </aside>
+        </footer>
     );
 };
 

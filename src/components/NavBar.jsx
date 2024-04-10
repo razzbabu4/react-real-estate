@@ -1,11 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 const NavBar = () => {
-    const user= 'hi';
+    const { user, logOut } = useAuth();
     const navLink =
         <>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/login'>Login</NavLink></li>
+            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
         </>
     return (
         <div className="navbar bg-base-100 max-w-7xl mx-auto">
@@ -40,7 +42,7 @@ const NavBar = () => {
                             <li>
                                 <Link>{user?.email || 'Unknown'}</Link>
                             </li>
-                            <li><Link >Logout</Link></li>
+                            <li><Link onClick={logOut}>Logout</Link></li>
                         </ul>
                     </div>
                 </>
