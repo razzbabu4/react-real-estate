@@ -7,7 +7,7 @@ const NavBar = () => {
         <>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/login'>Login</NavLink></li>
-            <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+            { user && <li><NavLink to='/userProfile'>User Profile</NavLink></li> }
         </>
     return (
         <div className="navbar bg-base-100 max-w-7xl mx-auto">
@@ -29,24 +29,17 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
                 {user ? <>
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                    <div>
+                        <div className="btn btn-ghost btn-circle avatar relative group">
                             <div className="w-10 rounded-full">
                                 <img alt="Tailwind CSS Navbar component" src={user?.photoURL || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} />
                             </div>
+                            <p className="text-black bg-gray-100 p-3 rounded-lg absolute right-14 opacity-0 group-hover:opacity-70">{user.displayName || 'Unknown'}</p>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>
-                                <Link>{user?.displayName || 'Unknown'}</Link>
-                            </li>
-                            <li>
-                                <Link>{user?.email || 'Unknown'}</Link>
-                            </li>
-                            <li><Link onClick={logOut}>Logout</Link></li>
-                        </ul>
                     </div>
+                    <Link className="btn ml-2" onClick={logOut}>Logout</Link>
                 </>
-                    : <Link to='/login' className="btn">Login</Link>
+                : <Link to='/login' className="btn">Login</Link>
                 }
             </div>
         </div>

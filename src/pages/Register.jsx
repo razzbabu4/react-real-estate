@@ -8,18 +8,8 @@ import useAuth from "../hooks/useAuth";
 
 const Register = () => {
     const { createUser, updateUserProfile, logOut } = useAuth();
-    // const [registerError, setRegisterError] = useState('')
-    // const [registerSuccess, setRegisterSuccess] = useState('')
     const [showPassword, setShowPassword] = useState(false)
 
-    // if (password.length < 6) {
-    //     setRegisterError('Password should be at least 6 characters');
-    //     return;
-    // }
-    // else if (!/[A-Z]/.test(password)) {
-    //     setRegisterError('Please Provide at least one uppercase letter');
-    //     return;
-    // }
     const {
         register,
         handleSubmit,
@@ -35,13 +25,12 @@ const Register = () => {
     }
 
     return (
-        <div className="hero">
-            <div className="hero-content flex-col">
-                <div className="text-center">
-                    <h1 className="text-5xl font-bold">Register!</h1>
-                </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <div className="mt-6">
+                <div className=" shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto rounded-xl">
+                    <div className="text-center">
+                        <h1 className="text-3xl font-bold mt-6">Register!</h1>
+                    </div>
+                    <form onSubmit={handleSubmit(onSubmit)} className="p-6">
                         <div>
                             <label className="label">
                                 <span className="label-text">Your Name</span>
@@ -81,8 +70,20 @@ const Register = () => {
                     </form>
                 </div>
             </div>
-        </div>
     );
 };
 
 export default Register;
+
+
+
+// const [registerError, setRegisterError] = useState('')
+//     const [registerSuccess, setRegisterSuccess] = useState('')
+//     if (password.length < 6) {
+//         setRegisterError('Password should be at least 6 characters');
+//         return;
+//     }
+//     else if (!/[A-Z]/.test(password)) {
+//         setRegisterError('Please Provide at least one uppercase letter');
+//         return;
+//     }
