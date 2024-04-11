@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+// import { Link } from "react-router-dom";
 
 
 const UpdateProfile = () => {
@@ -12,6 +13,7 @@ const UpdateProfile = () => {
     } = useForm()
 
     const onSubmit = (data) => {
+        console.log(data)
         const { name, photo } = data;
         updateUserProfile(name, photo)
     }

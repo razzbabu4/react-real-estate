@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Single-family Home with Garden",
+        "segment_name": "Luxury",
+        "description": "Beautiful single-family home with a spacious garden, perfect for a serene lifestyle.",
+        "price": "$2,500,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Malibu, California",
+        "facilities": [
+            "swimming pool",
+            "garden",
+            "spacious living room"
+        ],
+        "image": "single_family_home_image.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Modern Townhouse in the City Center",
+        "segment_name": "Mid-range",
+        "description": "Modern townhouse in the heart of the city, close to all amenities.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "New York City, New York",
+        "facilities": [
+            "gym",
+            "balcony",
+            "modern kitchen"
+        ],
+        "image": "townhouse_image.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Urban Apartment Living",
+        "segment_name": "Family",
+        "description": "Spacious apartment in a family-friendly neighborhood, perfect for urban living.",
+        "price": "$600,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Austin, Texas",
+        "facilities": [
+            "playground",
+            "community center",
+            "modern amenities"
+        ],
+        "image": "apartment_image.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Student Housing Complex",
+        "segment_name": "Budget",
+        "description": "Convenient student housing complex near universities and colleges.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1000 sq ft",
+        "location": "Miami, Florida",
+        "facilities": [
+            "study areas",
+            "fitness center",
+            "recreation rooms"
+        ],
+        "image": "student_housing_image.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Senior Living Community",
+        "segment_name": "Luxury",
+        "description": "Luxurious senior living community offering comfort and care for retirees.",
+        "price": "$1,200,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "Scottsdale, Arizona",
+        "facilities": [
+            "swimming pool",
+            "healthcare facilities",
+            "social activities"
+        ],
+        "image": "senior_living_image.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Scenic Vacation Rental",
+        "segment_name": "Vacation",
+        "description": "Scenic vacation rental with breathtaking views, perfect for a relaxing getaway.",
+        "price": "$500 per night",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Lake Tahoe, California",
+        "facilities": [
+            "lake access",
+            "deck",
+            "cozy bedrooms"
+        ],
+        "image": "vacation_rental_image.jpg"
+    }
+]

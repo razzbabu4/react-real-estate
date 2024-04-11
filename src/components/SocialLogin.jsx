@@ -25,7 +25,7 @@ const SocialLogin = () => {
     return (
         <>
             <div className="divider my-2">Continue with</div>
-            <div className="flex p-6 justify-around">
+            <div className="flex flex-col gap-6 p-6 justify-around">
                 <button onClick={()=>handleSocialMedia(googleLogin)} className="btn btn-outline">
                    <FcGoogle className="text-xl"></FcGoogle> Google
                 </button>

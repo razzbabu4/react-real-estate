@@ -34,7 +34,7 @@ const NavBar = () => {
                             <div className="w-10 rounded-full">
                                 <img alt="Tailwind CSS Navbar component" src={user?.photoURL || 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} />
                             </div>
-                            <p className="text-black bg-gray-100 p-3 rounded-lg absolute right-14 opacity-0 group-hover:opacity-70">{user.displayName || 'Unknown'}</p>
+                            <span className="text-black bg-gray-100 p-3 rounded-lg absolute right-14 opacity-0 group-hover:opacity-70">{user.displayName || 'Unknown'}</span>
                         </div>
                     </div>
                     <Link className="btn ml-2" onClick={logOut}>Logout</Link>

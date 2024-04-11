@@ -3,6 +3,9 @@ import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase/firebase.config";
 import PropTypes from 'prop-types';
 
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const AuthContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
@@ -67,6 +70,7 @@ const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
+            <ToastContainer></ToastContainer>
         </AuthContext.Provider>
     );
 };

@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../components/SocialLogin";
-
+import { toast } from 'react-toastify';
 
 const Login = () => {
-    const { logIn } = useAuth();
+    const { logIn, user } = useAuth();
     const {
         register,
         handleSubmit,
@@ -14,9 +14,17 @@ const Login = () => {
 
     const onSubmit = (data) => {
         const { email, password } = data;
+        if(user){
+            toast.warning('User already exist')
+            return;
+        }
         logIn(email, password)
-            .then((result) => {
-                console.log(result.user)
+            .then(() => {
+                toast.success('Successfully login')
+
+            })
+            .catch(()=>{
+                toast.warning('Please provide a valid user info')
             })
     }
     return (
