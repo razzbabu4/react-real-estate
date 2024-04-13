@@ -8,6 +8,9 @@ import Register from "../pages/Register";
 import ErrorPage from "../components/ErrorPage";
 import UserProfile from "../components/UserProfile";
 import UpdateProfile from "../components/UpdateProfile";
+import ViewProperty from "../components/ViewProperty";
+import ProtectedRoute from "../protectedRoute/ProtectedRoute";
+// import Estates from "../pages/Home/Estates/Estates";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +20,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/estate.json')
             },
             {
                 path: '/login',
@@ -29,11 +33,16 @@ const router = createBrowserRouter([
             },
             {
                 path: '/userProfile',
-                element: <UserProfile></UserProfile>
+                element: <ProtectedRoute><UserProfile></UserProfile></ProtectedRoute>
             },
             {
                 path: '/updateProfile',
                 element: <UpdateProfile></UpdateProfile>
+            },
+            {
+                path: '/viewProperty/:id',
+                element: <ViewProperty></ViewProperty>,
+                loader: () => fetch('/estate.json')
             },
 
         ]

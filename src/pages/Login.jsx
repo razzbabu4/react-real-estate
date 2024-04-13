@@ -9,6 +9,7 @@ const Login = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
@@ -25,7 +26,8 @@ const Login = () => {
             })
             .catch(()=>{
                 toast.warning('Please provide a valid user info')
-            })
+            });
+            reset()
     }
     return (
         <div className="mt-6">

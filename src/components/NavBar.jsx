@@ -7,7 +7,9 @@ const NavBar = () => {
         <>
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/login'>Login</NavLink></li>
-            { user && <li><NavLink to='/userProfile'>User Profile</NavLink></li> }
+            {/* { user && <li><NavLink to='/userProfile'>User Profile</NavLink></li> } */}
+            <li><NavLink to='/userProfile'>User Profile</NavLink></li>
+
         </>
     return (
         <div className="navbar bg-base-100 max-w-7xl mx-auto">

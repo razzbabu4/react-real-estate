@@ -16,6 +16,7 @@ const Register = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
@@ -39,13 +40,15 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(name, photo)
                     .then(() => {
+                        navigate('/login')
                         logOut()
                             .then(() => {
-                                navigate('/login')
+                                // navigate('/login')
                                 toast.success('Successfully registered')
                             })
                     })
-            })
+            });
+            reset();
     }
 
     return (

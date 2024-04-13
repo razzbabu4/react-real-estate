@@ -1,14 +1,16 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
-// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const UpdateProfile = () => {
     const { updateUserProfile } = useAuth();
+    const navigate = useNavigate();
 
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
@@ -16,6 +18,10 @@ const UpdateProfile = () => {
         console.log(data)
         const { name, photo } = data;
         updateUserProfile(name, photo)
+        .then(()=>{
+            navigate('/userProfile')
+        });
+        reset();
     }
     return (
         <div className="hero">
