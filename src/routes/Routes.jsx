@@ -41,7 +41,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/viewProperty/:id',
-                element: <ViewProperty></ViewProperty>,
+                element: <ProtectedRoute><ViewProperty></ViewProperty></ProtectedRoute>,
                 loader: () => fetch('/estate.json')
             },
 

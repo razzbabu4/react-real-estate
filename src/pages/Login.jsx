@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../components/SocialLogin";
@@ -6,6 +6,9 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
     const { logIn, user } = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate()
+
     const {
         register,
         handleSubmit,
@@ -15,19 +18,19 @@ const Login = () => {
 
     const onSubmit = (data) => {
         const { email, password } = data;
-        if(user){
+        if (user) {
             toast.warning('User already exist')
             return;
         }
         logIn(email, password)
             .then(() => {
                 toast.success('Successfully login')
-
+                navigate(location?.state ? location.state : '/')
             })
-            .catch(()=>{
+            .catch(() => {
                 toast.warning('Please provide a valid user info')
             });
-            reset()
+        reset()
     }
     return (
         <div className="mt-6">
