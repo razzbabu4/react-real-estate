@@ -13,7 +13,7 @@
             "garden",
             "spacious living room"
         ],
-        "image": "single_family_home_image.jpg"
+        "image": "https://i.ibb.co/88WHd79/single-family-home-image.jpg"
     },
     {
         "id": 2,
@@ -29,7 +29,7 @@
             "balcony",
             "modern kitchen"
         ],
-        "image": "townhouse_image.jpg"
+        "image": "https://i.ibb.co/c8ZZd9J/town-house.jpg"
     },
     {
         "id": 3,
@@ -45,7 +45,7 @@
             "community center",
             "modern amenities"
         ],
-        "image": "apartment_image.jpg"
+        "image": "https://i.ibb.co/mvnzJYL/apartment-image.jpg"
     },
     {
         "id": 4,
@@ -61,7 +61,7 @@
             "fitness center",
             "recreation rooms"
         ],
-        "image": "student_housing_image.jpg"
+        "image": "https://i.ibb.co/MfsgXh0/student-housing-image.jpg"
     },
     {
         "id": 5,
@@ -77,7 +77,7 @@
             "healthcare facilities",
             "social activities"
         ],
-        "image": "senior_living_image.jpg"
+        "image": "https://i.ibb.co/MRpKgD5/Senior-Living-Community.jpg"
     },
     {
         "id": 6,
@@ -93,6 +93,6 @@
             "deck",
             "cozy bedrooms"
         ],
-        "image": "vacation_rental_image.jpg"
+        "image": "https://i.ibb.co/B65dNt4/vacation-rental-image.jpg"
     }
 ]

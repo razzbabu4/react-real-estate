@@ -10,7 +10,6 @@ import UserProfile from "../components/UserProfile";
 import UpdateProfile from "../components/UpdateProfile";
 import ViewProperty from "../components/ViewProperty";
 import ProtectedRoute from "../protectedRoute/ProtectedRoute";
-// import Estates from "../pages/Home/Estates/Estates";
 
 const router = createBrowserRouter([
     {

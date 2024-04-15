@@ -16,8 +16,8 @@ const UpdateProfile = () => {
 
     const onSubmit = (data) => {
         console.log(data)
-        const { name, photo } = data;
-        updateUserProfile(name, photo)
+        const { name, photo, phone} = data;
+        updateUserProfile(name, photo, phone)
         .then(()=>{
             navigate('/userProfile')
         });
@@ -44,6 +44,13 @@ const UpdateProfile = () => {
                             </label>
                             <input type="text" placeholder="new img" className="input input-bordered" {...register("photo", { required: true })} />
                             {errors.photo && <span className="text-red-500">This field is required</span>}
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Optional (phone number)</span>
+                            </label>
+                            <input type="text" placeholder="phone number" className="input input-bordered" {...register("phone")} />
+                            
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Update</button>

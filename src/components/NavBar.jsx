@@ -2,7 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const NavBar = () => {
-    const { user, logOut } = useAuth();
+    const { user, logOut, loading} = useAuth();
+    if(loading){
+        return <h1>Loading</h1>
+    }
     const navLink =
         <>
             <li><NavLink to='/'>Home</NavLink></li>
