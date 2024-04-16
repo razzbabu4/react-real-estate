@@ -6,13 +6,13 @@ const SingleEstate = ({ estate }) => {
     return (
         <div className="card card-compact w-full bg-base-100 shadow-xl border ">
            <div className="relative">
-           <figure><img src={image} alt="house" /></figure>
-            <div className="absolute text-white bg-blue-500 p-3 rounded-br-xl bg-opacity-50 top-0 left-0">
+           <figure><img className="h-72 w-full" src={image} alt="house" /></figure>
+            <div className="absolute text-white bg-blue-700 font-medium p-3 rounded-br-xl bg-opacity-50 top-0 left-0 uppercase">
                 {status}
             </div>
-            <div className="absolute text-white bg-black p-3 rounded-tl-xl bg-opacity-50 bottom-0 right-0">
+            <div className="absolute text-white bg-black font-medium p-3 rounded-tl-xl bg-opacity-50 bottom-0 right-0">
                 {price}
-            </div>
+            </div>  
            </div>
             <div className="card-body">
                 <h2 className="card-title">{estate_title}</h2>

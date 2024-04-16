@@ -2,16 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const NavBar = () => {
-    const { user, logOut, loading} = useAuth();
-    if(loading){
-        return <h1>Loading</h1>
-    }
+    const { user, logOut} = useAuth();
+    
     const navLink =
         <>
             <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/login'>Login</NavLink></li>
-            {/* { user && <li><NavLink to='/userProfile'>User Profile</NavLink></li> } */}
-            <li><NavLink to='/userProfile'>User Profile</NavLink></li>
+            {/* <li><NavLink to='/login'>Login</NavLink></li> */}
+            <li><NavLink to='/userProfile'>Update Profile</NavLink></li>
+            { user && <li><NavLink to='/Contact'>Contact Us</NavLink></li> }
 
         </>
     return (

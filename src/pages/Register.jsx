@@ -43,12 +43,15 @@ const Register = () => {
                         navigate('/login')
                         logOut()
                             .then(() => {
-                                // navigate('/login')
                                 toast.success('Successfully registered')
                             })
                     })
+
+            })
+            .catch((error) => {
+                toast.warning('Email already in use',error.message)
             });
-            reset();
+        reset();
     }
 
     return (

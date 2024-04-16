@@ -7,8 +7,8 @@ const ProtectedRoute = ({ children }) => {
 
     if (loading) {
         return <div className="text-center">
-            <span className="loading loading-ring loading-lg text-center"></span>
-        </div>
+                    <span className="loading loading-ring loading-lg text-center"></span>
+               </div>
     }
     if (user) {
         return children;

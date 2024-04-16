@@ -10,6 +10,7 @@ import UserProfile from "../components/UserProfile";
 import UpdateProfile from "../components/UpdateProfile";
 import ViewProperty from "../components/ViewProperty";
 import ProtectedRoute from "../protectedRoute/ProtectedRoute";
+import ContactUs from "../components/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,12 @@ const router = createBrowserRouter([
             {
                 path: '/updateProfile',
                 element: <UpdateProfile></UpdateProfile>
+            },
+            {
+                path: '/contact',
+                element: <ProtectedRoute>
+                    <ContactUs></ContactUs>
+                </ProtectedRoute>
             },
             {
                 path: '/viewProperty/:id',
