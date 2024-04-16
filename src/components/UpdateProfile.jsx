@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateProfile = () => {
@@ -29,6 +30,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className="hero">
+            <Helmet>
+                <title>Real Estate | Update Profile</title>
+            </Helmet>
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold">Update Profile</h1>

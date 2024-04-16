@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
-    const {user} = useAuth();
+    const { user } = useAuth();
     return (
         <div className="max-w-md p-8 m-auto max-h-screen sm:flex sm:space-x-6 dark:bg-gray-100 dark:text-gray-800">
+            <Helmet>
+                <title>Real Estate | User Profile</title>
+            </Helmet>
+
             <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
                 <img src={user?.photoURL} alt="profile" className="object-cover object-center w-full h-full rounded dark:bg-gray-500" />
             </div>

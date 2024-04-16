@@ -2,6 +2,7 @@ import { useParams, useLoaderData, Link } from "react-router-dom";
 import { LuAreaChart } from "react-icons/lu";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
+import { Helmet } from "react-helmet-async";
 
 
 const ViewProperty = () => {
@@ -12,6 +13,9 @@ const ViewProperty = () => {
     const { estate_title, segment_name, image, status, price, description, area, location, facilities } = estate;
     return (
         <div className="max-w-7xl mx-auto mt-6">
+            <Helmet>
+                <title>Real Estate | Property Details</title>
+            </Helmet>
             <div className="card lg:card-side bg-base-100 shadow-xl border">
                 <figure className="pl-6 lg:w-2/3" ><img className="rounded-lg" src={image} alt="Album" /></figure>
                 <div className="card-body">

@@ -3,6 +3,7 @@ import useAuth from "../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import SocialLogin from "../components/SocialLogin";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { logIn, user } = useAuth();
@@ -34,6 +35,9 @@ const Login = () => {
     }
     return (
         <div className="mt-6">
+            <Helmet>
+                <title>Real Estate | Login</title>
+            </Helmet>
             <div className="shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto rounded-xl">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold mt-6">Login now!</h1>
