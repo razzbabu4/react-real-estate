@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const SingleEstate = ({ estate }) => {
@@ -25,5 +26,9 @@ const SingleEstate = ({ estate }) => {
         </div>
     );
 };
+
+SingleEstate.propTypes = {
+    estate: PropTypes.object
+}
 
 export default SingleEstate;

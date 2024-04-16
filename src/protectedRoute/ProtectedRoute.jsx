@@ -1,5 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import PropTypes from 'prop-types';
 
 const ProtectedRoute = ({ children }) => {
     const { user, loading } = useAuth();
@@ -16,5 +17,9 @@ const ProtectedRoute = ({ children }) => {
 
     return <Navigate state={location.pathname} to='/login'></Navigate>
 };
+
+ProtectedRoute.propTypes = {
+    children: PropTypes.node
+}
 
 export default ProtectedRoute;
