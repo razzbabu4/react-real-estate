@@ -13,7 +13,6 @@ const SocialLogin = () => {
     const handleSocialMedia = (socialMedia) => {
         socialMedia()
             .then(result => {
-                // console.log(result.user)
                 if(result.user){
                     navigate(location?.state || '/')
                 }

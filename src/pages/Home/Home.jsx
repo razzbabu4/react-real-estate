@@ -3,12 +3,11 @@ import Slider from "../Home/Slider/Slider";
 import Estates from "./Estates/Estates";
 
 
-
 const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>Real Estate | Home</title>
+                <title>Haven Harbor | Home</title>
             </Helmet>
             <div>
                 <Slider></Slider>

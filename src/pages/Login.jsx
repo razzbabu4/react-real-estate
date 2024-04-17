@@ -36,7 +36,7 @@ const Login = () => {
     return (
         <div className="mt-6">
             <Helmet>
-                <title>Real Estate | Login</title>
+                <title>Haven Harbor | Login</title>
             </Helmet>
             <div className="shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto rounded-xl">
                 <div className="text-center">

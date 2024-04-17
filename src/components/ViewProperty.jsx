@@ -12,32 +12,32 @@ const ViewProperty = () => {
     const estate = estates.find(estate => estate.id === intId);
     const { estate_title, segment_name, image, status, price, description, area, location, facilities } = estate;
     return (
-        <div className="max-w-7xl mx-auto mt-6">
+        <div className="max-w-7xl mx-auto my-6">
             <Helmet>
-                <title>Real Estate | Property Details</title>
+                <title>Haven Harbor | Property Details</title>
             </Helmet>
             <div className="card lg:card-side bg-base-100 shadow-xl border">
-                <figure className="pl-6 lg:w-2/3" ><img className="rounded-lg" src={image} alt="Album" /></figure>
+                <figure data-aos="zoom-in" data-aos-duration="1000" className="pl-6 lg:w-2/3" ><img className="rounded-lg" src={image} alt="Album" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-3xl font-bold">{estate_title}</h2>
-                    <p className="text-[#23BE0A]">{segment_name}</p>
+                    <h2 data-aos="zoom-in-left" data-aos-delay='1500' className="card-title text-3xl font-bold">{estate_title}</h2>
+                    <p data-aos="zoom-in-left" data-aos-delay='1800' className="text-[#23BE0A]">{segment_name}</p>
                     <div className="divider my-2"></div>
-                    <p className="uppercase font-medium text-[#2e4314]">{status}</p>
+                    <p data-aos="zoom-in-left" data-aos-delay='2100' className="uppercase font-medium text-[#2e4314]">{status}</p>
                     <div className="divider my-2"></div>
-                    <p><span className="text-black font-bold">Description : </span>{description}</p>
-                    <ul className="flex gap-4 text-[#23BE0A] mt-4">
+                    <p data-aos="zoom-in-left" data-aos-delay='2300'><span className="text-black font-bold">Description : </span>{description}</p>
+                    <ul data-aos="zoom-in-left" data-aos-delay='2500' className="flex gap-4 text-[#23BE0A] mt-4">
                         <li className="text-black font-bold">Facilities: </li>
                         {
                             facilities.map((facility, idx) => <li className="uppercase" key={idx}>{facility}</li>)
                         }
                     </ul>
-                    <div className="flex gap-8 my-6">
+                    <div data-aos="zoom-in-left" data-aos-delay='2800' className="flex gap-8 my-6">
                         <div className="flex items-center gap-2"><LuAreaChart /> {area}</div>
-                        <div className="flex items-center gap-2"><MdOutlinePriceChange/> {price}</div>
-                        <div className="flex items-center gap-2"><SlLocationPin/> {location}</div>
+                        <div className="flex items-center gap-2"><MdOutlinePriceChange /> {price}</div>
+                        <div className="flex items-center gap-2"><SlLocationPin /> {location}</div>
                     </div>
                     <div className="divider"></div>
-                    <div className="card-actions justify-end">
+                    <div data-aos="zoom-in-left" data-aos-delay='3000' className="card-actions justify-end">
                         <Link to='/' className="btn bg-[#1313134D]">Go back</Link>
                     </div>
                 </div>

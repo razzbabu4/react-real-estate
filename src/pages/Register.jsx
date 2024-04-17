@@ -5,11 +5,12 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import { toast } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 
 
 const Register = () => {
-    const { createUser, updateUserProfile, logOut } = useAuth();
+    const { createUser, updateUserProfile, setUpdate, setUser } = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
 
@@ -40,22 +41,30 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(name, photo)
                     .then(() => {
-                        navigate('/login')
-                        logOut()
-                            .then(() => {
-                                toast.success('Successfully registered')
-                            })
+                        navigate('/userProfile')
+                        setUser({
+                            displayName: name,
+                            photoURL: photo,
+                        })
+                        setUpdate(false)
+                    });
+                        // navigate('/login')
+                        // logOut()
+                        //     .then(() => {
+                        //         toast.success('Successfully registered')
+                        //     })
                     })
-
-            })
             .catch((error) => {
-                toast.warning('Email already in use',error.message)
+                toast.warning('Email already in use', error.message)
             });
         reset();
     }
 
     return (
         <div className="mt-6">
+              <Helmet>
+                    <title>Haven Harbor | Registration</title>
+               </Helmet>
             <div className=" shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto rounded-xl">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold mt-6">Register!</h1>

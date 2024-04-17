@@ -2,18 +2,35 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const NavBar = () => {
-    const { user, logOut} = useAuth();
-    
+    const { user, logOut } = useAuth();
+
     const navLink =
         <>
-            <li><NavLink to='/'>Home</NavLink></li>
-            {/* <li><NavLink to='/login'>Login</NavLink></li> */}
-            <li><NavLink to='/userProfile'>Update Profile</NavLink></li>
-            { user && <li><NavLink to='/Contact'>Contact Us</NavLink></li> }
+            <li><NavLink to='/' style={({ isActive }) => {
+                return {
+                    backgroundColor: isActive ? "#23BE0A" : "",
+                    border: isActive ? "1px solid green" : "",
+                    color: isActive ? "white" : "",
+                };
+            }}>Home</NavLink></li>
+            <li><NavLink to='/userProfile' style={({ isActive }) => {
+                return {
+                    backgroundColor: isActive ? "#23BE0A" : "",
+                    border: isActive ? "1px solid green" : "",
+                    color: isActive ? "white" : "",
+                };
+            }}>Update Profile</NavLink></li>
+            {user && <li><NavLink to='/Contact' style={({ isActive }) => {
+                return {
+                    backgroundColor: isActive ? "#23BE0A" : "",
+                    border: isActive ? "1px solid green" : "",
+                    color: isActive ? "white" : "",
+                };
+            }}>Contact Us</NavLink></li>}
 
         </>
     return (
-        <div className="navbar bg-base-100 max-w-7xl mx-auto">
+        <div className="navbar bg-base-100 max-w-7xl mx-auto my-6 shadow-md">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,9 +38,10 @@ const NavBar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navLink}
+                        <li><Link className="btn bg-red-500 p-1 ml-2 text-white" onClick={logOut}>Logout</Link></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Real Estate</a>
+                <a className="btn btn-ghost text-xl">Haven Harbor</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -40,9 +58,9 @@ const NavBar = () => {
                             <span className="text-black bg-gray-100 p-3 rounded-lg absolute right-14 opacity-0 group-hover:opacity-70">{user.displayName || 'Unknown'}</span>
                         </div>
                     </div>
-                    <Link className="btn ml-2" onClick={logOut}>Logout</Link>
+                    <Link className="btn btn-error ml-2 text-white hidden lg:flex" onClick={logOut}>Logout</Link>
                 </>
-                : <Link to='/login' className="btn">Login</Link>
+                    : <Link to='/login' className="btn bg-[#23BE0A] text-white">Login</Link>
                 }
             </div>
         </div>
