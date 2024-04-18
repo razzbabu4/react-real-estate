@@ -1,8 +1,15 @@
-# React + Vite
+# Haven Harbor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features
+- **Property Listings**: Show all available houses and apartments.
+- **Visuals**: Use good pictures and eye-catching animation.
+- **Easy to Use**: Make it simple to find and understand.
+- **Works Everywhere**: Make sure it's good on phones, tabs and computers.
+- **Security**: Keeps your personal information safe when you're browsing and making inquiries.
 
-Currently, two official plugins are available:
+# Live-link : https://react-real-estate-ca80a.web.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Npm package name 
+- <a href='https://www.npmjs.com/package/aos'>AOS Package<a/>
+- <a href='https://react-hook-form.com/'>React Hook form<a/>
+- <a href='https://swiperjs.com/'>Swiper slider<a/>
