@@ -1,6 +1,6 @@
 # Haven Harbor
 
-# Fetures
+# Features
 - **Property Listings**: Show all available houses and apartments.
 - **Visuals**: Use good pictures and eye-catching animation.
 - **Easy to Use**: Make it simple to find and understand.
