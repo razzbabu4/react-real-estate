@@ -5,7 +5,7 @@
 - **Visuals**: Use good pictures and eye-catching animation.
 - **Easy to Use**: Make it simple to find and understand.
 - **Works Everywhere**: Make sure it's good on phones, tabs and computers.
-- **Extra Help**: Offer tools and info to make buying easier.
+- **Security**: Keeps your personal information safe when you're browsing and making inquiries.
 
 # Live-link : https://react-real-estate-ca80a.web.app
 
