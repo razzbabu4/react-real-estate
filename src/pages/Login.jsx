@@ -29,18 +29,18 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
             })
             .catch(() => {
-                toast.warning('Please provide a valid user info')
+                toast.warning('Please provide a registered user info')
             });
         reset()
     }
     return (
-        <div className="mt-6">
+        <div className="my-6">
             <Helmet>
                 <title>Haven Harbor | Login</title>
             </Helmet>
             <div className="shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto rounded-xl">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold mt-6">Login now!</h1>
+                    <h1 data-aos='fade-down' data-aos-duration='1000' className="text-3xl font-bold mt-6">Login now!</h1>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">

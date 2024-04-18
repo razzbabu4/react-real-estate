@@ -6,11 +6,6 @@ import PropTypes from 'prop-types';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
-
 export const AuthContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
@@ -78,7 +73,7 @@ const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
-            <ToastContainer></ToastContainer>
+            <ToastContainer/>
         </AuthContext.Provider>
     );
 };

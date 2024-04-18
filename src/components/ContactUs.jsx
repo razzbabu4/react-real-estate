@@ -12,11 +12,12 @@ const ContactUs = () => {
                 <div className="flex flex-col justify-between">
                     <div className="space-y-2">
                         <h2 data-aos="fade-right"
+                            data-aos-duration="1000"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine" className="text-4xl font-bold leading-tight lg:text-5xl">Lets talk!</h2>
                         <img data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-duration="1000" src={human} alt="" className="p-6 h-52 md:h-64" />
+                            data-aos-duration="2000" src={human} alt="" className="p-6 h-52 md:h-64" />
                     </div>
                 </div>
                 <form noValidate="" className="space-y-6">

@@ -37,7 +37,7 @@ const UpdateProfile = () => {
                 </Helmet>
                 <div className="hero-content flex-col">
                     <div className="text-center">
-                        <h1 data-aos='fade-down' data-aos-duration='1000' className="text-5xl font-bold">Update Profile</h1>
+                        <h1 data-aos='fade-down' data-aos-duration='1000' className="text-3xl lg:text-5xl font-bold">Update Profile</h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">

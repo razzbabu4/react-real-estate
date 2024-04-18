@@ -41,19 +41,15 @@ const Register = () => {
             .then(() => {
                 updateUserProfile(name, photo)
                     .then(() => {
-                        navigate('/userProfile')
+                        navigate('/')
+                        toast.success('Successfully registered')
                         setUser({
                             displayName: name,
                             photoURL: photo,
                         })
                         setUpdate(false)
                     });
-                        // navigate('/login')
-                        // logOut()
-                        //     .then(() => {
-                        //         toast.success('Successfully registered')
-                        //     })
-                    })
+            })
             .catch((error) => {
                 toast.warning('Email already in use', error.message)
             });
@@ -62,12 +58,12 @@ const Register = () => {
 
     return (
         <div className="mt-6">
-              <Helmet>
-                    <title>Haven Harbor | Registration</title>
-               </Helmet>
+            <Helmet>
+                <title>Haven Harbor | Registration</title>
+            </Helmet>
             <div className=" shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border mx-auto rounded-xl">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold mt-6">Register!</h1>
+                    <h1 data-aos='fade-down' data-aos-duration='1000' className="text-3xl font-bold mt-6">Register!</h1>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="p-6">
                     <div>
