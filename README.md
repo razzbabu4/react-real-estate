@@ -10,6 +10,6 @@
 # Live-link : https://react-real-estate-ca80a.web.app
 
 # Npm package name 
-- AOS Package
-- React Hook form
-- <a src='https://swiperjs.com/'>Swiper slider<a/>
+- <a href='https://www.npmjs.com/package/aos'>AOS Package<a/>
+- <a href='https://react-hook-form.com/'>React Hook form<a/>
+- <a href='https://swiperjs.com/'>Swiper slider<a/>
