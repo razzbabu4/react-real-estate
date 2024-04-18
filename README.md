@@ -12,4 +12,4 @@
 # Npm package name 
 - AOS Package
 - React Hook form
-- Swiper slider
+- <a src='https://swiperjs.com/'>Swiper slider<a/>
