@@ -11,9 +11,15 @@ const UpdateProfile = () => {
     const {
         register,
         handleSubmit,
+        setValue,
         reset,
         formState: { errors },
     } = useForm()
+
+    if (user) {
+        setValue('name', user.displayName || '');
+        setValue('photo', user.photoURL || '');
+      }
 
     const onSubmit = (data) => {
         console.log(data)
@@ -22,8 +28,8 @@ const UpdateProfile = () => {
             .then(() => {
                 navigate('/userProfile')
                 setUser({
-                    displayName: name,
-                    photoURL: photo,
+                    displayName: name.value,
+                    photoURL: photo.value,
                 })
                 setUpdate(false)
             });
@@ -56,7 +62,7 @@ const UpdateProfile = () => {
                                 {errors.photo && <span className="text-red-500">This field is required</span>}
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#23BE0A] text-white">Update</button>
+                                <button className="btn bg-[#23BE0A] text-white">Save Changes</button>
                             </div>
                         </form>
                     </div>

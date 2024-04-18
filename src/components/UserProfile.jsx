@@ -6,7 +6,7 @@ import { MdOutlinePhotoCamera } from "react-icons/md";
 const UserProfile = () => {
     const { user } = useAuth();
     return (
-        <div className="relative min-h-[calc(100vh-100px)]">
+        <div className="mb-16">
             <Helmet>
                 <title>Haven Harbor | User Profile</title>
             </Helmet>
@@ -28,8 +28,8 @@ const UserProfile = () => {
                             <span className="dark:text-gray-600">{user?.email}</span>
                         </span>
                         <span data-aos="fade-left" data-aos-delay="2300" className="flex items-center space-x-2">
-                            <MdOutlinePhotoCamera></MdOutlinePhotoCamera>
-                            <span className="dark:text-gray-600">{user?.photoURL.slice(0,24)}</span>
+                            <MdOutlinePhotoCamera className="text-lg"></MdOutlinePhotoCamera>
+                            <span className="dark:text-gray-600 max-w-44 whitespace-nowrap text-ellipsis overflow-hidden">{user?.photoURL}</span>
                         </span>
                     </div>
                     <div data-aos="zoom-in-down" data-aos-delay="2600">

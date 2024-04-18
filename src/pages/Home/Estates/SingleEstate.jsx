@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const SingleEstate = ({ estate }) => {
     const {id, estate_title, segment_name, image, status, price, description } = estate;
     return (
-        <div data-aos="zoom-out-down" data-aos-duration="500" className="card card-compact w-full bg-base-100 shadow-xl border ">
+        <div data-aos="zoom-out-down" data-aos-duration="1000" className="card card-compact w-full bg-base-100 shadow-xl border ">
            <div className="relative">
            <figure><img className="h-72 w-full" src={image} alt="house" /></figure>
             <div className="absolute text-white bg-blue-700 font-medium p-3 rounded-br-xl bg-opacity-50 top-0 left-0 uppercase">
